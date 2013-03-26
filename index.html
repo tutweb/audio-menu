@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Audio</title>
+	<script src="jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+		<h1>Robot <small>HTML5 Audio on Menu</small></h1>
+		<p>A robot is a mechanical or virtual artificial agent, usually an electro-mechanical machine that is guided by a computer program or electronic circuitry... <a href="http://en.wikipedia.org/wiki/Robot">read more..</a> </p>
+		<aside>
+			<p>
+				* Demo of using HTML5 Audio on a menu, tutorial by <a href="http://www.tutorial-webdesign.com">Tutorial-webdesign.com</a> | 
+				Follow twitter <a href="http://www.twitter.com/tut_web">@tut_web</a> , 
+				Image  by <a href="http://www.flickr.com/photos/takoyaki_king/8186641411/sizes/l/in/photostream/">Takoyaki_King</a>
+			</p>
+		</aside>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="#">About Robot</a></li>
+		<li><a href="#">Back to Tutorial</a></li>
+		<li><a href="#">Download</a></li>
+	</ul>
+	<audio id="soundBeep" preload="auto">
+			<source src="beep.mp3"></source>
+			<source src="beep.ogg"></source>
+	</audio>
+</nav>
+
+<script>
+	var soundBeep = $("#soundBeep")[0];
+	$("nav a").hover(function() {
+		soundBeep.play();
+	}, function(){
+		soundBeep.pause();
+	});
+</script>
+</body>
+</html>
